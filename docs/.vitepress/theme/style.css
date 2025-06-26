@@ -1,0 +1,149 @@
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/**
+ * Colors
+ * -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "SourceCode";
+  src: url("/fonts/SourceCode.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --vp-c-indigo-1: #E6AC00;
+  --vp-c-indigo-2: #d6ac2e;
+  --vp-c-indigo-3: #c9aa4e;
+
+  --vp-c-text-1: rgb(40, 42, 43);
+  --vp-c-text-2: rgba(40, 42, 43, .72);
+  --vp-c-text-3: rgba(40, 42, 43, .52);
+
+  --vp-c-indigo-soft: rgb(22, 119, 255, 0.14);
+
+  --custom-red: #F92855;
+  --custom-green: #2DC08E;
+
+  --vp-code-color: #476582;
+
+  --vp-nav-height: 60px;
+
+  --vp-button-brand-border: var(--vp-c-indigo-2);
+  --vp-button-brand-bg: var(--vp-c-indigo-1);
+  --vp-button-brand-hover-border: var(--vp-c-indigo-2);
+  --vp-button-brand-hover-bg: var(--vp-c-indigo-2);
+  --vp-button-brand-active-border: var(--vp-c-indigo-2);
+  --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+
+  --vp-c-divider: #ececec;
+  --vp-c-gutter: var(--vp-c-divider);
+
+  --vp-code-font-size: 14px;
+  --vp-font-family-mono: SourceCode, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --vp-font-family-base: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Arial", "sans-serif";
+
+  --vp-home-hero-bg: linear-gradient(180deg, rgba(238, 238, 238, 0) 0%, rgba(234, 204, 117, 0.2) 52%, rgba(230, 172, 0, 0) 100%);
+  --vp-c-bg-soft: #fafafa;
+}
+
+.dark {
+  --vp-c-text-1: rgb(240, 242, 243);
+  --vp-c-text-2: rgba(240, 242, 243, .72);
+  --vp-c-text-3: rgba(240, 242, 243, .52);;
+  --vp-code-color: #c9def1;
+  --vp-c-bg: #121212;
+  --vp-c-divider: #232525;
+
+  --vp-home-hero-bg: linear-gradient(180deg, rgba(238, 238, 238, 0) 0%, rgba(234, 204, 117, 0.15) 52%, rgba(230, 172, 0, 0) 100%);
+  --vp-c-bg-soft: rgba(250, 250, 250, 0.05);
+}
+
+body {
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  line-height: 1.6;
+}
+
+.VPFeatures .VPFeature {
+  background-color: transparent;
+  border: none;
+}
+
+.VPFeatures .VPFeature .box {
+  padding: 12px 8px;
+}
+
+.VPFeatures .VPFeature .VPImage {
+  margin-bottom: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.VPFeatures .VPFeature .title {
+  padding: 8px 0;
+  line-height: normal;
+}
+
+.VPFeatures .VPFeature .details {
+  padding: 0;
+  font-weight: normal;
+}
+
+@media (min-width: 640px) {
+  .VPFeatures .VPFeature .title {
+    font-size: 18px;
+    line-height: normal;
+    padding: 12px 0;
+  }
+
+  .VPFeatures .VPFeature .VPImage {
+    margin-bottom: 0;
+    width: 48px;
+    height: 48px;
+  }
+
+  .VPFeatures .VPFeature .box {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPSidebar .curtain {
+    top: calc(var(--vp-nav-height)* -1);
+  }
+}
+
+@media (min-width: 960px) {
+  .VPFeatures .VPFeature .title {
+    font-size: 20px;
+    padding: 16px 0;
+  }
+  
+  .VPFeatures .VPFeature .details {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.vp-doc p a img {
+  display: inline;
+  vertical-align: middle;
+}
+
+.vp-code-group .tabs label {
+  display: flex;
+  align-items: center;
+}
+
+.vp-code-group .tabs label svg {
+  margin-right: 8px;
+}
+
+.vp-doc :not(pre) > code {
+  padding: 2px 6px;
+}
+
