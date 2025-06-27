@@ -5512,11 +5512,11 @@ var StoreImp = /** @class */ (function () {
                 filterIndicators.forEach(function (indicator) {
                     _this._addIndicatorCalcTask(indicator, type);
                 });
-                this._chart.layout({
-                    measureWidth: true,
-                    update: true,
-                    buildYAxisTick: true
-                });
+                // this._chart.layout({
+                //   measureWidth: true,
+                //   update: true,
+                //   buildYAxisTick: true
+                // })
             }
         }
     };
